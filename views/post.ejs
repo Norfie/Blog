@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+<h1><%= postTitle %></h1>
+
+<div class="postBody">
+  <p><%= postBody %></p>
+</div>
+
+<div class="buttons">
+  <form class="" action="/redact" method="post">
+    <button type="submit" class="btn btn-sm btn-brown">Redact</button>
+    <input type="hidden" name="redactPostId" value="<%= postId %>">
+  </form>
+  <form class="" action="/delete" method="post">
+    <button type="submit" class="btn btn-sm btn-outline-brown">Delete</button>
+    <input type="hidden" name="deletedPostId" value="<%= postId %>">
+  </form>
+</div>
+
+
+
+
+
+
+<%- include("partials/footer"); -%>

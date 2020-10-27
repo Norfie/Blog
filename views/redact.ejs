@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+
+<h1>Edit your post</h1>
+
+<form action="/save" method="post">
+
+  <div class="form-group">
+    <label for="redactedPostTitle">Title</label>
+    <textarea class="form-control" name="redactedPostTitle" id="redactedPostTitle"><%= postTitle %></textarea>
+
+    <label for="redactedPostText">Post</label>
+    <textarea class="form-control" name="redactedPostText" id="redactedPostText"><%= postBody %></textarea>
+  </div>
+
+  <button type="submit" name="redactedPostButton" class="btn btn-lg btn-brown">Save</button>
+  <input type="hidden" name="redactedPostId" value="<%= postId %>">
+
+</form>
+
+<%- include("partials/footer"); -%>
